@@ -1,0 +1,589 @@
+{
+  "collection": {
+    "info": {
+      "_postman_id": "be269632-0ce3-4a72-82a0-af171d16cf1c",
+      "name": "platzi fake api testing",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+      "updatedAt": "2024-02-25T11:24:23.000Z",
+      "createdAt": "2024-02-24T15:25:31.000Z",
+      "lastUpdatedBy": "4496516",
+      "uid": "4496516-be269632-0ce3-4a72-82a0-af171d16cf1c"
+    },
+    "item": [
+      {
+        "name": "Product",
+        "item": [
+          {
+            "name": "All products",
+            "id": "3c1ea5b7-7737-4788-9e9c-f555d57524b3",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "https://api.escuelajs.co/api/v1/products",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "escuelajs",
+                  "co"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "products"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "4496516-3c1ea5b7-7737-4788-9e9c-f555d57524b3"
+          },
+          {
+            "name": "single product",
+            "id": "70d42e85-9d4c-4550-bbfd-bd7b37c387d1",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "https://api.escuelajs.co/api/v1/products/4",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "escuelajs",
+                  "co"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "products",
+                  "4"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "4496516-70d42e85-9d4c-4550-bbfd-bd7b37c387d1"
+          },
+          {
+            "name": "Create a product",
+            "id": "82586cfa-1e53-4992-891c-db7baee784ce",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\r\n  \"title\": \"Club\",\r\n  \"price\": 10,\r\n  \"description\": \"A place where we party\",\r\n  \"categoryId\": 1,\r\n  \"images\": [\"https://placeimg.com/640/480/any\"]\r\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "https://api.escuelajs.co/api/v1/products/",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "escuelajs",
+                  "co"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "products",
+                  ""
+                ]
+              }
+            },
+            "response": [],
+            "uid": "4496516-82586cfa-1e53-4992-891c-db7baee784ce"
+          },
+          {
+            "name": "Update a product",
+            "id": "e005d1d6-8ac4-4cc1-b54a-fa2a13a73d73",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\r\n  \"title\": \"Club\",\r\n  \"price\": 100\r\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "https://api.escuelajs.co/api/v1/products/85",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "escuelajs",
+                  "co"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "products",
+                  "85"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "4496516-e005d1d6-8ac4-4cc1-b54a-fa2a13a73d73"
+          },
+          {
+            "name": "Delete Product",
+            "id": "e00bc599-9248-407b-84e6-b4dd8796bbee",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "https://api.escuelajs.co/api/v1/products/85",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "escuelajs",
+                  "co"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "products",
+                  "85"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "4496516-e00bc599-9248-407b-84e6-b4dd8796bbee"
+          }
+        ],
+        "id": "7c3b997e-7c4f-40bb-bd31-35ddc68210ef",
+        "uid": "4496516-7c3b997e-7c4f-40bb-bd31-35ddc68210ef"
+      },
+      {
+        "name": "Categories",
+        "item": [
+          {
+            "name": "All categories",
+            "id": "251a7ee3-138c-49f8-94e4-527d14b87c4a",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "https://api.escuelajs.co/api/v1/categories",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "escuelajs",
+                  "co"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "categories"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "4496516-251a7ee3-138c-49f8-94e4-527d14b87c4a"
+          },
+          {
+            "name": "Single category",
+            "id": "687cad02-2c16-41dc-82d3-77d95746edce",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "https://api.escuelajs.co/api/v1/categories/3",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "escuelajs",
+                  "co"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "categories",
+                  "3"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "4496516-687cad02-2c16-41dc-82d3-77d95746edce"
+          },
+          {
+            "name": "Create category",
+            "event": [
+              {
+                "listen": "prerequest",
+                "script": {
+                  "id": "16f97628-9164-41ba-86ae-e22bee2c21d9",
+                  "exec": [
+                    "",
+                    ""
+                  ],
+                  "type": "text/javascript",
+                  "packages": {}
+                }
+              }
+            ],
+            "id": "8b547522-8439-4e25-a68d-e833cfbfcaf2",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\r\n  \"name\": \"Electronics\",\r\n  \"image\": \"https://placeimg.com/640/480/any\"\r\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "https://api.escuelajs.co/api/v1/categories",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "escuelajs",
+                  "co"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "categories"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "4496516-8b547522-8439-4e25-a68d-e833cfbfcaf2"
+          },
+          {
+            "name": "Update category",
+            "id": "5bcc159d-03da-465e-89a2-ed28253fe48d",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\r\n  \"name\": \"Love is light\"\r\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "https://api.escuelajs.co/api/v1/categories/3",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "escuelajs",
+                  "co"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "categories",
+                  "3"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "4496516-5bcc159d-03da-465e-89a2-ed28253fe48d"
+          },
+          {
+            "name": "Delete category",
+            "id": "76216b08-aa15-42c4-816c-462e5e9f3f48",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "https://api.escuelajs.co/api/v1/categories/3",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "escuelajs",
+                  "co"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "categories",
+                  "3"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "4496516-76216b08-aa15-42c4-816c-462e5e9f3f48"
+          },
+          {
+            "name": "All products by category",
+            "id": "4d789886-71e7-4386-b74c-4ddb5c57b307",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "https://api.escuelajs.co/api/v1/categories/1/products",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "escuelajs",
+                  "co"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "categories",
+                  "1",
+                  "products"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "4496516-4d789886-71e7-4386-b74c-4ddb5c57b307"
+          }
+        ],
+        "id": "e59a58e5-a6c1-4d33-b00a-bb98cb0584ab",
+        "uid": "4496516-e59a58e5-a6c1-4d33-b00a-bb98cb0584ab"
+      },
+      {
+        "name": "Users",
+        "item": [
+          {
+            "name": "All users",
+            "id": "6d5b6753-37a8-4023-9a80-8c9652103cf8",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "https://api.escuelajs.co/api/v1/users",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "escuelajs",
+                  "co"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "users"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "4496516-6d5b6753-37a8-4023-9a80-8c9652103cf8"
+          },
+          {
+            "name": "Single user",
+            "id": "a27cd35d-ad33-4c77-a8a0-b50cb526a6ab",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "https://api.escuelajs.co/api/v1/users/1",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "escuelajs",
+                  "co"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "users",
+                  "1"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "4496516-a27cd35d-ad33-4c77-a8a0-b50cb526a6ab"
+          },
+          {
+            "name": "Create User",
+            "id": "af4c12ff-a1dd-4220-be13-42be0e27a39f",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\r\n  \"name\": \"Dovdale\",\r\n  \"email\": \"dovdale@gmail.com\",\r\n  \"password\": \"1234\",\r\n  \"avatar\": \"https://picsum.photos/800\"\r\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "https://api.escuelajs.co/api/v1/users/",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "escuelajs",
+                  "co"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "users",
+                  ""
+                ]
+              }
+            },
+            "response": [],
+            "uid": "4496516-af4c12ff-a1dd-4220-be13-42be0e27a39f"
+          },
+          {
+            "name": "Update user",
+            "id": "081e1909-c2e6-4063-a86a-08d640ec662b",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "auth": {
+                "type": "noauth"
+              },
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\r\n  \"email\": \"johnyman@gmail.com\",\r\n  \"name\": \"john\"\r\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "https://api.escuelajs.co/api/v1/users/9",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "escuelajs",
+                  "co"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "users",
+                  "9"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "4496516-081e1909-c2e6-4063-a86a-08d640ec662b"
+          },
+          {
+            "name": "New Request",
+            "id": "7ae9aa98-7871-4312-bdb4-b480a306d5cd",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\r\n  \"email\": \"john@mail.com\"\r\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "https://api.escuelajs.co/api/v1/users/is-available",
+                "protocol": "https",
+                "host": [
+                  "api",
+                  "escuelajs",
+                  "co"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "users",
+                  "is-available"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "4496516-7ae9aa98-7871-4312-bdb4-b480a306d5cd"
+          }
+        ],
+        "id": "0372f9f0-7992-4e99-b94b-eca90abe21c4",
+        "uid": "4496516-0372f9f0-7992-4e99-b94b-eca90abe21c4"
+      }
+    ],
+    "event": [
+      {
+        "listen": "prerequest",
+        "script": {
+          "id": "1b7e6231-ccdc-4f1a-a482-45baefb73ea4",
+          "type": "text/javascript",
+          "exec": [
+            ""
+          ]
+        }
+      },
+      {
+        "listen": "test",
+        "script": {
+          "id": "51ec8786-df0f-4f67-9cf5-1540ba67a2e2",
+          "type": "text/javascript",
+          "exec": [
+            ""
+          ]
+        }
+      }
+    ],
+    "variable": [
+      {
+        "key": "musa",
+        "value": ""
+      }
+    ]
+  }
+}
